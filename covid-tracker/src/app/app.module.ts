@@ -8,7 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CountriesComponent } from './components/countries/countries.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DashboardCardComponent } from './dashboard-card/dashboard-card.component'
+import { DashboardCardComponent } from './components/dashboard-card/dashboard-card.component'
 
 @NgModule({
   declarations: [
