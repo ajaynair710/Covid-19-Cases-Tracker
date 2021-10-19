@@ -39,26 +39,26 @@ export class HomeComponent implements OnInit {
 
     this.dataService.getGlobalData()
       .subscribe(
-        {
-          next: (result) => {
-            console.log(result);
-            this.globalData = result;
-            result.forEach(cs => {
-              if (!Number.isNaN(cs.confirmed)) {
-                this.totalActive += cs.active
-                this.totalConfirmed += cs.confirmed
-                this.totalDeaths += cs.deaths
-                this.totalRecovered += cs.active
-              }
+        // {
+        //   next: (result) => {
+        //     console.log(result);
+        //     this.globalData = result;
+        //     result.forEach(cs => {
+        //       if (!Number.isNaN(cs.confirmed)) {
+        //         this.totalActive += cs.active
+        //         this.totalConfirmed += cs.confirmed
+        //         this.totalDeaths += cs.deaths
+        //         this.totalRecovered += cs.active
+        //       }
 
-            })
+        //     })
 
-            this.initChart('c');
-          }, 
-          complete : ()=>{
-            this.loading = false;
-          }
-        }
+        //     this.initChart('c');
+        //   }, 
+        //   complete : ()=>{
+        //     this.loading = false;
+        //   }
+        // }
       )
   }
 
@@ -92,9 +92,9 @@ export class HomeComponent implements OnInit {
             value = cs.recovered
         
 
-        this.datatable.push([
-            cs.country, value
-          ])
+        // this.datatable.push([
+        //     cs.country, value
+        //   ])
     })
     console.log(this.datatable);
 
